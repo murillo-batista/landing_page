@@ -67,3 +67,7 @@ h6{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.section {
+    min-height: 100vh; /*100% do viewport (aparecer inteira) */
+}
