@@ -1,3 +1,9 @@
+/* Adiciona variáveis globais ao CSS */
+:root{
+    --primary-color:#0A1128;
+    --white-color:#FFFFFF;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +21,7 @@ body {
   font-variation-settings:
     "wdth" 100;
   font-size: 1.6rem; /* Equivale a 16px */
+  color: var(--primary-color); /*Coloca a cor da fonte como a variável definida antes */
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -49,8 +56,14 @@ h6{
     font-size: 3.5rem;
 }
 
-.main-bg {
+.main-bg{
   background-image: url('../img/main-bg.svg');
   background-size: cover; /* Se ajusta a janela */
   background-position: center center;
+  color: var(--white-color);
+}
+
+.main-content{
+    max-width: 1200px;
+    margin: 0 auto;
 }
