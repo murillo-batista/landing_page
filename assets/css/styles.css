@@ -2,6 +2,8 @@
 :root{
     --primary-color:#0A1128;
     --white-color:#FFFFFF;
+    --gap: 3rem;
+    --light-gray-color:#EEEEEE;
 }
 
 *{
@@ -13,6 +15,10 @@ html{
     font-size: 62.5%;
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
   font-family: "Open Sans", serif;
   font-optical-sizing: auto;
@@ -20,7 +26,7 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  font-size: 1.6rem; /* Equivale a 16px */
+  font-size: 2rem; /* Equivale a 20px */
   color: var(--primary-color); /*Coloca a cor da fonte como a variável definida antes */
 }
 
@@ -63,11 +69,71 @@ h6{
   color: var(--white-color);
 }
 
+.white-bg{
+    background-color: var(--white-color);
+}
+
 .main-content{
     max-width: 1200px;
     margin: 0 auto;
+    padding: var(--gap);
 }
 
 .section {
     min-height: 100vh; /*100% do viewport (aparecer inteira) */
+}
+
+.menu{
+    background-color: var(--white-color);
+    position: fixed; /* Sempre acompanha a rolagem da página*/
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--light-gray-color); /*Coloca borda embaixo do menu */
+}
+
+.menu-content{
+    display: flex;
+    justify-content: space-between; /*separar o h1 do nav */
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a{
+    color: inherit; /* herda a cor do pai */
+}
+
+.menu ul{
+    list-style: none;
+    display: flex; /* container flex dentro de outro */
+}
+
+.menu ul li a{
+    display: block; /* pois o <a> é por padrao display inline e quero empurrar o conteúdo para baixo */
+    padding: 2rem;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.menu ul li a::after{ /*coloca a linha nos links do menu */
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0%;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out; /* efeito de transição */
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
 }
