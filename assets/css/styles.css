@@ -14,6 +14,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth; /*Rolls the page smoothly */
 }
 
 a{
@@ -180,4 +181,44 @@ p{
     justify-content: center;
     height: 100vh;
     text-align: center;
+}
+
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.grid-main-heading{
+    margin-bottom: 1rem;
+}
+
+.grid-description{
+    padding-bottom: 5rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter; /*seta um contador para a grid em css */
+}
+
+.grid h3{
+    font-size: 3rem;
+    position: relative; /*força o h3 a ficar dentro da div  e com isso usar o absolute para ficar relativo */
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before{
+    counter-increment: grid-counter; /*seleciona o contador em css */
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg); /*rotaciona o número em 5 graus */
 }
