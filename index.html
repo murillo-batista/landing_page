@@ -19,10 +19,12 @@
     <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#home">LOGO</a></h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#home">LOGO</a>
+            </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#grid-one">Grid-One</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -255,10 +257,12 @@
     </section>
 
     <footer id="footer" class="footer white-bg">
-        <p><a rel="nofollow" target="_blank" href="#">Feito por Murillo Batista</a>
-
+        <p>
+            <a rel="nofollow" target="_blank" href="#">Feito por Murillo Batista</a>
         </p>
     </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 </body>
 
 </html>
