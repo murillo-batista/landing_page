@@ -72,6 +72,17 @@ p{
     margin-bottom: 3rem;
 }
 
+table{
+    width: 100%; /*pegar 100% da janela */
+    border-collapse: collapse; /*colar as bordas da tabela */
+}
+
+table td, table th{
+    border: 0.1rem solid var(--light-gray-color);
+    text-align: left;
+    padding: 0.5rem;
+}
+
 .main-bg{
   background-image: url('../img/main-bg.svg');
   background-size: cover; /* Se ajusta a janela */
@@ -223,4 +234,19 @@ p{
     top: -4rem;
     left: -2rem;
     transform: rotate(5deg); /*rotaciona o número em 5 graus */
+}
+
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+    transform: translate(-3%,3%) scale(1.2) rotate(5deg);
 }
