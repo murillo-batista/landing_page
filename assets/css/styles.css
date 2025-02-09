@@ -75,12 +75,25 @@ p{
 table{
     width: 100%; /*pegar 100% da janela */
     border-collapse: collapse; /*colar as bordas da tabela */
+    min-width: 3.6rem;
+}
+
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
 table td, table th{
+    white-space: nowrap; /*Não deixa o texto quebrar linha */
     border: 0.1rem solid var(--light-gray-color);
     text-align: left;
     padding: 0.5rem;
+}
+
+tfoot td, table th{
+    background: var(--light-gray-color);
 }
 
 .main-bg{
@@ -249,4 +262,9 @@ table td, table th{
 
 .gallery-img img:hover{
     transform: translate(-3%,3%) scale(1.2) rotate(5deg);
+}
+
+.responsive-table{
+    overflow: hidden;
+    overflow-x: auto;
 }
